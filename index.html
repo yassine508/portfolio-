@@ -3,118 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="download (4).png">
     <title>Yassine Chemlali's Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e2f;
-            color: white;
+            background: #000;
+            color: #00ff99;
+            overflow-x: hidden;
         }
+
         h1 {
             text-align: center;
-            color: cyan;
+            font-size: 2.5rem; /* Increased font size for better visibility */
+            color: #00ff99;
+            animation: glitch 1.5s infinite;
         }
+
         p {
             text-align: center;
+            font-size: 1.2rem;
         }
+
         .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
+
         .skills img, .connect img {
             margin: 5px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4);
         }
+
+        .skills img:hover, .connect img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 255, 0, 0.6);
+        }
+
         .stats img {
-            width: 48%;
+            width: 100%;
+            max-width: 400px;
             margin: 10px auto;
             display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .stats img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 255, 0, 0.6);
+        }
+
         .gif {
             float: right;
             max-width: 300px;
             margin-left: 20px;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4);
         }
+
+        .gif:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 255, 0, 0.6);
+        }
+
         .footer {
-            background-color: #282c34;
+            background: #111;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
+            padding: 30px; /* Increased padding for better aesthetics */
+            color: #00ff99;
+            position: relative;
             bottom: 0;
             width: 100%;
-            color: white;
+            box-shadow: 0px -3px 15px rgba(0, 255, 0, 0.3);
         }
+
         .footer a {
-            color: cyan;
+            color: #00ff99;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            color: #ff00ff;
+        }
+
+        .form-input, .form-button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #00ff99;
+            background-color: #333;
+            color: #ddd;
+            font-size: 1rem; /* Increased font size for better readability */
+        }
+
+        .form-button {
+            background-color: #00ff99;
+            color: black;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .form-button:hover {
+            transform: scale(1.1);
+            background-color: #ff00ff;
+        }
+
+        .card {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.6);
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px 0 #00ff99, -2px -2px 0 #ff00ff;
+            }
+            50% {
+                text-shadow: -2px -2px 0 #00ff99, 2px 2px 0 #ff00ff;
+            }
+            100% {
+                text-shadow: 2px 2px 0 #00ff99, -2px -2px 0 #ff00ff;
+            }
+        }
+
+        .screen {
+            border: 5px solid #00ff99;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 20px #00ff99;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10, 1) 100%);
+            overflow: hidden;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #00ff99;
+            width: 5px;
+            height: 1em;
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                background-color: transparent;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gif {
+                float: none;
+                margin: auto;
+                display: block;
+            }
+
+            .container {
+                padding: 20px; /* Increased padding for better mobile layout */
+            }
+
+            .form-input, .form-button {
+                width: 100%;
+                font-size: 1.1rem; /* Adjusted font size for better mobile experience */
+            }
         }
     </style>
 </head>
 <body>
+    <div class="screen">
+        <header>
+            <h1><b>Hey, I'm Yassine Chemlali</b> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35" alt="Waving hand"></h1>
+            <p>
+                <img src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=Hey!+I'm+Yassine+Chemlali..&hearts;++;Full-stack+JavaScript+Developer;Passionate+about+learning+and+coding;" alt="Typing text animation">
+                <span class="cursor"></span>
+            </p>
+        </header>
 
-    <h1><b>Hey, I'm Yassine Chemlali</b> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"></h1>
+        <div class="container">
 
-    <p>
-        <img src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=600&height=100&lines=Hey!+I'm+Yassine+Chemlali..&hearts;++;Full-stack+JavaScript+Developer;Passionate+about+learning+and+coding;">
-    </p>
+            <section id="about" class="card">
+                <img class="gif" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Coding animation">
+                <h3>🧑‍💻 About Me:</h3>
+                <ul>
+                    <li>🌱 I’m currently learning <b>Full-Stack JavaScript Development.</b></li>
+                    <li>💻 I work on projects with <b>Node.js, React, MongoDB, and more.</b></li>
+                    <li>📧 You can reach me at <b>chemlaliyassine77@gmail.com.</b></li>
+                </ul>
+            </section>
 
-    <div class="container">
-        <img class="gif" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Coding">
-        <h3>🧑‍💻 About Me:</h3>
-        <ul>
-            <li>🌱 I’m currently learning <b>Full-Stack JavaScript Development.</b></li>
-            <li>💻 I work on projects with <b>Node.js, React, MongoDB, and more.</b></li>
-            <li>📧 You can reach me at <b>chemlaliyassine77@gmail.com.</b></li>
-        </ul>
+            <hr>
 
-        <hr>
+            <section class="connect">
+                <h3>🤝 Let's Connect!</h3>
+                <p>
+                    <a href="https://www.linkedin.com/in/yassine-chemlali-a9a741337/">
+                        <img src="https://img.shields.io/badge/-Yassine%20Chemlali-blue?style=flat&logo=Linkedin&logoColor=white" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/yassine_chemlalii/">
+                        <img src="https://img.shields.io/badge/-Yassine%20Chemlali-orange?style=flat&logo=Instagram&logoColor=white" alt="Instagram">
+                    </a>
+                </p>
+            </section>
 
-        <h3>🤝 Let's Connect!</h3>
-        <p class="connect">
-            <a href="https://www.linkedin.com/in/yassine-chemlali-a9a741337/">
-                <img src="https://img.shields.io/badge/-Yassine%20Chemlali-blue?style=flat&logo=Linkedin&logoColor=white" alt="LinkedIn">
-            </a>
-            <a href="https://www.instagram.com/yassine_chemlalii/">
-                <img src="https://img.shields.io/badge/-Yassine%20Chemlali-orange?style=flat&logo=Instagram&logoColor=white" alt="Instagram">
-            </a>
-        </p>
+            <hr>
 
-        <hr>
+            <section id="skills" class="card">
+                <h3>🛠️ My Skills:</h3>
+                <p class="skills">
+                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript">
+                    <img src="https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white" alt="Node.js">
+                    <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React">
+                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5">
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3">
+                    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white" alt="MongoDB">
+                    <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white" alt="TailwindCSS">
+                </p>
+            </section>
 
-        <h3>🛠️ My Skills:</h3>
-        <p class="skills">
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript">
-            <img src="https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white" alt="Node.js">
-            <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React">
-            <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5">
-            <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3">
-            <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white" alt="MongoDB">
-            <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white" alt="TailwindCSS">
-        </p>
+            <hr>
 
-        <hr>
+            <section>
+                <h3>🚀 My GitHub Stats:</h3>
+                <div class="stats">
+                    <img src="https://github-readme-stats.vercel.app/api?username=yassine508&show_icons=true&theme=radical" alt="GitHub Stats">
+                    <img src="https://github-readme-activity-graph.vercel.app/graph?username=yassine508&theme=react-dark" alt="Activity Graph">
+                </div>
+            </section>
 
-        <img class="gif" src="https://media.giphy.com/media/TEnXkcsHrP4YedChhA/giphy.gif" alt="Coding">
+            <hr>
 
-        <h3>📊 GitHub Stats:</h3>
-        <div class="stats">
-            <img src="https://github-readme-stats.vercel.app/api?username=yassine508&show_icons=true&theme=radical" alt="GitHub Stats">
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=yassine508&theme=react-dark" alt="Activity Graph">
+            <section id="contact">
+                <h3>📬 Contact Me:</h3>
+                <form action="mailto:chemlaliyassine77@gmail.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; max-width: 500px; margin: auto;">
+                    <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+                    <input type="email" name="email" placeholder="Your Email" class="form-input" required>
+                    <textarea name="message" placeholder="Your Message" class="form-input" required></textarea>
+                    <button type="submit" class="form-button">Send</button>
+                </form>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>✍️ Random Quote:</h3>
+                <p>
+                    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Dev Quote">
+                </p>
+            </section>
         </div>
 
-        <hr>
-
-        <h3>✍️ Random Quote:</h3>
-        <p>
-            <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Dev Quote">
-        </p>
+        <footer class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/yassine508">Yassine Chemlali</a></p>
+        </footer>
     </div>
-
-    <div class="footer">
-        <p>Made with ❤️ by <a href="https://github.com/yassine508">Yassine Chemlali</a></p>
-    </div>
-
 </body>
 </html>
